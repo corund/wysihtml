@@ -4390,8 +4390,7 @@ wysihtml5.polyfills(window, document);
     }
 
     return api;
-}, this);
-;/**
+}, this);;/**
  * Text range module for Rangy.
  * Text-based manipulation and searching of ranges and selections.
  *
