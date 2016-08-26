@@ -9401,7 +9401,7 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
     })(),
 
     alt: (function() {
-      var REG_EXP = /[^ a-z0-9_\-]/gi;
+      var REG_EXP = /[^ a-z0-9가-힣_\-]/gi;
       return function(attributeValue, nodeName) {
         if (!attributeValue) {
           if (nodeName === "IMG") {
