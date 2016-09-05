@@ -19225,8 +19225,10 @@ wysihtml5.views.View = Base.extend(
       var imgView = this.container.querySelector('.qq-container IMG');
       console.log(imgView);
       if (null !== imgView) {
-        var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : field.defaultValue;
-        imgView.setAttribute("SRC", newValue);
+        var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : '';
+        if (!  newValue) {
+          imgView.setAttribute("SRC", newValue);
+        }
       }
     }
   });
