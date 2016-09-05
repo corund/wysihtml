@@ -19223,12 +19223,9 @@ wysihtml5.views.View = Base.extend(
     _interpolate: function(avoidHiddenFields) {
       this.base(avoidHiddenFields);
       var imgView = this.container.querySelector('.qq-container IMG');
-      console.log(imgView);
       if (null !== imgView) {
         var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : '';
-        if (newValue) {
-          imgView.setAttribute("SRC", newValue);
-        }
+        imgView.setAttribute("SRC", newValue);
       }
     }
   });
