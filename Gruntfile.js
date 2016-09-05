@@ -116,6 +116,7 @@ module.exports = function(grunt) {
     "src/toolbar/dialog.js",
     "src/toolbar/speech.js",
     "src/toolbar/toolbar.js",
+    "src/toolbar/dialog_insertImage.js",
     "src/toolbar/dialog_createTable.js",
     "src/toolbar/dialog_foreColorStyle.js",
     "src/toolbar/dialog_fontSizeStyle.js"

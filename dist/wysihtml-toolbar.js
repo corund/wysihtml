@@ -19219,6 +19219,19 @@ wysihtml5.views.View = Base.extend(
 
 })(wysihtml5);
 ;(function(wysihtml5) {
+  wysihtml5.toolbar.Dialog_insertImage = wysihtml5.toolbar.Dialog.extend({
+    _interpolate: function(avoidHiddenFields) {
+      this.base(avoidHiddenFields);
+      var imgView = this.container.querySelector('.qq-container IMG');
+      console.log(imgView);
+      if (null !== imgview) {
+        var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : field.defaultValue;
+        imgView.setAttribute("SRC", newValue);
+      }
+    }
+  });
+})(wysihtml5);
+;(function(wysihtml5) {
   wysihtml5.toolbar.Dialog_createTable = wysihtml5.toolbar.Dialog.extend({
     show: function(elementToChange) {
       this.base(elementToChange);

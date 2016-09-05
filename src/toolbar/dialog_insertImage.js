@@ -3,6 +3,7 @@
     _interpolate: function(avoidHiddenFields) {
       this.base(avoidHiddenFields);
       var imgView = this.container.querySelector('.qq-container IMG');
+      console.log(imgView);
       if (null !== imgview) {
         var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : field.defaultValue;
         imgView.setAttribute("SRC", newValue);
