@@ -19226,7 +19226,7 @@ wysihtml5.views.View = Base.extend(
       console.log(imgView);
       if (null !== imgView) {
         var newValue  = (this.elementToChange && typeof(this.elementToChange) !== 'boolean') ? (this.elementToChange.getAttribute("SRC") || "") : '';
-        if (!  newValue) {
+        if (newValue) {
           imgView.setAttribute("SRC", newValue);
         }
       }
